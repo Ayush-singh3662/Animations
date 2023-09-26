@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(40, 37, 37);
+            border: 5px solid black;
+        }
+        .box1 {
+            height: 45px;
+            width: 250px;
+            position: relative;
+            border: 3px solid brown;
+            border-radius: 10px;
+            background-color: aquamarine;
+            animation-name: rightMovement;
+            animation-timing-function: initial;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 5s;
+        }
+        @keyframes rightMovement {
+            from {
+                top: 0;
+                left: 0;
+            }
+            to {
+                top: 0;
+                left: 970px;
+            }
+        }
+        .box2 {
+            height: 45px;
+            width: 250px;
+            position: relative;
+            border: 3px solid brown;
+            border-radius: 10px;
+            background-color: aquamarine;
+            top: 445px;
+            animation-name: leftMovement;
+            animation-duration: 5s;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: initial;
+        }
+        @keyframes leftMovement {
+            from {
+                top: 395px;
+                left: 970px;
+            }
+            to {
+                top: 395px;
+                left: 0;
+            }
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            border: 3px solid brown;
+            border-radius: 50px;
+            background-color: aquamarine;
+            position: relative;
+            animation-name: circleMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 0;
+            animation-direction: alternate;
+            animation-timing-function: initial;
+        }
+        @keyframes circleMovement {
+            from {
+                top: 0;
+                left: 0;
+            }
+            to {
+                top: 400px;
+                left: 1170px;
+            }
+            /* 0% {
+            top: 1%;
+            left: 5%;
+           }
+           30% {
+            top: 5%;
+            left: 90%;
+           }
+
+           60% {
+            top: 70%;
+            left: 10%;
+           }
+           100%{
+            top: 75%;
+            left: 90%;
+           } */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="circle"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
